@@ -1,7 +1,7 @@
-import { getConnection } from 'typeorm';
+import dataSource from './createDataSource';
 
 const resetDatabase = async (): Promise<void> => {
-  const connection = getConnection();
+  const connection = await dataSource;
   await connection.dropDatabase();
   await connection.synchronize();
 };

@@ -11,3 +11,6 @@
 **/build
 **/npm-debug.log*
 .idea
+
+# cypress
+**/cypress/fixtures
